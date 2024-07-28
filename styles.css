@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e5ec;
+    margin: 0;
+    padding: 20px;
+}
+
+#app {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#toolbar {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e0e5ec;
+    color: #5a5a5a;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 
+        6px 6px 12px #b8b9be,
+        -6px -6px 12px #ffffff;
+}
+
+button:hover {
+    box-shadow: 
+        4px 4px 8px #b8b9be,
+        -4px -4px 8px #ffffff;
+}
+
+button:active {
+    box-shadow: inset 
+        4px 4px 8px #b8b9be,
+        inset -4px -4px 8px #ffffff;
+}
+
+#canvas {
+    background-color: #e0e5ec;
+    border-radius: 20px;
+    padding: 20px;
+    min-height: 600px;
+    position: relative;
+    box-shadow: 
+        6px 6px 12px #b8b9be,
+        -6px -6px 12px #ffffff;
+}
+
+.canvas-element {
+    position: relative;
+    background-color: #e0e5ec;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: move;
+    user-select: none;
+    box-shadow: 
+        4px 4px 8px #b8b9be,
+        -4px -4px 8px #ffffff;
+}
+
+.canvas-element:hover {
+    box-shadow: 
+        2px 2px 4px #b8b9be,
+        -2px -2px 4px #ffffff;
+}
+
+.canvas-element:hover .element-controls {
+    display: flex;
+    opacity: 1;
+}
+
+.element-controls {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+    background-color: rgba(90, 90, 90, 0.8);
+    border-radius: 20px;
+    padding: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.control-button {
+    width: 30px;
+    height: 30px;
+    background-color: #e0e5ec;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #5a5a5a;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.control-button:hover {
+    background-color: #d0d5dc;
+}
+
+
+.canvas-element.editing {
+    cursor: text;
+}
+
+.rainbow-line {
+    position: absolute;
+    pointer-events: none;
+}
+
+.rotate-handle, .delete-handle, .layer-up, .layer-down {
+    width: 20px;
+    height: 20px;
+    background-color: #c098c4;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+}
+
+.link-handle {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #e0e5ec;
+    border-radius: 50%;
+    cursor: grab;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #5a5a5a;
+    font-size: 16px;
+    box-shadow: 
+        4px 4px 8px #b8b9be,
+        -4px -4px 8px #ffffff;
+}
